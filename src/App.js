@@ -1,6 +1,8 @@
 import { useEffect } from "react";
 import "./App.css";
 import fetchApi from "./Components/api/fetch";
+//--------------------------------------//
+import Header from "./Components/Header";
 
 function App() {
   async function fetchStandardResults() {
@@ -17,7 +19,11 @@ function App() {
     fetchStandardResults();
   }, []);
 
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      <Header />
+    </div>
+  );
 }
 
 export default App;
