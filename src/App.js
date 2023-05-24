@@ -1,13 +1,21 @@
 import { useEffect } from "react";
 import "./App.css";
+import fetchApi from "./Components/api/fetch";
 
 function App() {
-  const testYoutubeAPI = () => {
-    //console.log(process.env.REACT_APP_DEVELOPMENT_API_KEY);
-  };
+  async function fetchStandardResults() {
+    try {
+      let result = await fetchApi({
+        method: "get",
+      });
+      //console.log(result.data);
+    } catch (error) {
+      console.log(error);
+    }
+  }
   useEffect(() => {
-    testYoutubeAPI();
-  });
+    fetchStandardResults();
+  }, []);
 
   return <div className="App"></div>;
 }
