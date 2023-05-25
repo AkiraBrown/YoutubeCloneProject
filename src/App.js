@@ -10,7 +10,7 @@ function App() {
       let result = await fetchApi({
         method: "get",
       });
-      //console.log(result.data);
+      console.log(result.data);
     } catch (error) {
       console.log(error);
     }
