@@ -1,27 +1,24 @@
-import { useEffect } from "react";
 import "./App.css";
-import fetchApi from "./Components/api/fetch";
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 //--------------------------------------//
 import Header from "./Components/Header";
+import Cards from "./Components/Cards";
+import About from "./Components/About";
 
 function App() {
-  async function fetchStandardResults() {
-    try {
-      let result = await fetchApi({
-        method: "get",
-      });
-      console.log(result.data);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-  useEffect(() => {
-    fetchStandardResults();
-  }, []);
-
   return (
     <div className="App">
-      <Header />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Cards />}></Route>
+          <Route path="/About" element={<About />}></Route>
+          <Route path="/:channel"></Route>
+          <Route path="/videos/:videoId"></Route>
+        </Routes>
+      </Router>
     </div>
   );
 }

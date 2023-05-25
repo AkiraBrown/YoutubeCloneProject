@@ -1,26 +1,17 @@
+import { NavLink } from "react-router-dom";
 export default function Header() {
   return (
     <nav className="navbar navbar-expand-lg bg-danger">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <NavLink className={"navbar-brand"} to="/">
           Youtube
-        </a>
+        </NavLink>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">
+              <NavLink className="nav-link active" to="/About">
                 About
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>
