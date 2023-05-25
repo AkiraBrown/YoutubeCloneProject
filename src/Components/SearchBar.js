@@ -1,6 +1,6 @@
 import { useState } from "react";
 import React from "react";
-import { fetchApi } from "../api/fetch.js";
+import { fetchApi } from "./api/fetch.js";
 
 export default function SearchBar({
   setSearchResults,
@@ -11,7 +11,7 @@ export default function SearchBar({
 
   function handleUserInput(event) {
     event.preventDefault();
-    getUserSearch(input).then((response) => {
+    fetchApi(input).then((response) => {
       setSearchResults(response.items);
       if (!hasSearched) {
         setHasSearched(true);
