@@ -7,7 +7,7 @@ async function fetchApi(data) {
     url: `${process.env.REACT_APP_DEVELOPMENT_URL}&${key}${resource}`, //process.env.REACT_APP_DEVELOPMENT_URL + "&" + key,
     ...data,
   };
-  //console.log(configObj);
+  console.log(configObj);
   try {
     let result = await axios(configObj);
     return result;
