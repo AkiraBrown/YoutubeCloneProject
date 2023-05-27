@@ -1,3 +1,7 @@
-import React, { useEffect, useState } from "react";
-import fetchApi from "./api/fetch";
-export default function Channel() {}
+export default function Channel() {
+  return (
+    <div>
+      <p>This is the channel page</p>
+    </div>
+  );
+}
