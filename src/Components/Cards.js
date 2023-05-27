@@ -9,6 +9,7 @@ export default function Cards() {
     try {
       let result = await fetchApi({
         method: "get",
+        resource: "&maxResults=15",
       });
       //console.log(result.data);
       setVideoData(result.data);
@@ -23,7 +24,9 @@ export default function Cards() {
 
   return (
     <div className="container">
-      <Card cardData={videoData?.items} />
+      <div className="row row-cols-1 row-cols-md-3 g-4">
+        <Card cardData={videoData?.items} />
+      </div>
     </div>
   );
 }
