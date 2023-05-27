@@ -1,7 +1,6 @@
 import fetchApi from "./api/fetch";
 import Card from "./Card";
 import { useEffect, useState } from "react";
-import Card from "./Card";
 
 export default function Cards() {
   const [videoData, setVideoData] = useState([]);
