@@ -4,7 +4,7 @@ export default function Card({ cardData }) {
   const localData = cardData;
 
   return (
-    <>
+    <div className="row row-cols-1 row-cols-md-3 g-4">
       {localData?.map((item) => {
         //console.log(item);
         const videoID = item?.id?.videoId;
@@ -20,7 +20,7 @@ export default function Card({ cardData }) {
         // console.log(videoThumbnail);
         return (
           <Link to={`/videos/${videoID}`} key={videoID} className="col">
-            <div className="card" style={{ width: "18rem" }}>
+            <div className="card" style={{ width: "20rem" }}>
               <img
                 src={videoThumbnail}
                 alt={videoID}
@@ -40,6 +40,6 @@ export default function Card({ cardData }) {
           </Link>
         );
       })}
-    </>
+    </div>
   );
 }
