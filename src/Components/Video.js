@@ -1,7 +1,10 @@
+import { useParams } from "react-router-dom";
+import Youtube from "react-youtube";
 export default function Video() {
+  const { videoId } = useParams();
   return (
-    <div>
-      <p>This is the video page</p>
+    <div className="container-fluid">
+      <Youtube videoId={videoId}></Youtube>
     </div>
   );
 }
