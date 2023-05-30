@@ -4,7 +4,8 @@ export default function About() {
   const projectBio =
     "This project was built by a team of 2 developers. We used a React framework to create a Youtube clone that allows the user to search & display a single video as well as the ability to share & send any video. ";
 
-  const shaqFredBio = "Shaquala's Bio";
+  const shaqFredBio =
+    "Shaquala is a cat lover. She loves God and has 2 beautiful daughters who brings her joy. She strives for greatness and want to pay it forward so that others may have opportunities to fulfill their dreams. ";
 
   const AkiraBrownBio =
     "I'm a full stack developer and games developer with interests in cars and video games.";
