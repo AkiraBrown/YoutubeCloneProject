@@ -9,8 +9,8 @@ export default function Video() {
   const [comment, setComment] = useState("");
   const [commentArray, setCommentArray] = useState([]);
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit(event) {
+    event.preventDefault();
 
     let newCommentArray = [...commentArray, { comment }];
 
@@ -30,26 +30,26 @@ export default function Video() {
             type="text"
             name="commenter-name"
             id="commenter-name"
-            onChange={(e) => setCommenterName(e.target.value)}
+            onChange={(event) => setCommenterName(event.target.value)}
             value={commenterName}
           />
           <div>
-            <label htmlFor="comment">Comment</label>
+            <label>Comment</label>
             <input
               type="text"
               name="comment"
               id="comment"
-              onChange={(e) => setComment(e.target.value)}
+              onChange={(event) => setComment(event.target.value)}
               value={comment}
             />
           </div>
           <button>Add Note</button>
 
-          <ul className="Comments"> </ul>
-          {commentArray.map((id, index) => {
+          <ul className="comments"> </ul>
+          {commentArray.map((videoId, index) => {
             return (
               <li key={index}>
-                {id.commenterName} says {`"${id.comment}"`}
+                {videoId.commenterName} says {`"${videoId.comment}"`}
               </li>
             );
           })}
