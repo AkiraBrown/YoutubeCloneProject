@@ -34,7 +34,7 @@ export default function Video() {
             value={commenterName}
           />
           <div>
-            <label htmlFor="comment">Comment</label>
+            <label>Comment</label>
             <input
               type="text"
               name="comment"
@@ -46,10 +46,10 @@ export default function Video() {
           <button>Add Note</button>
 
           <ul className="comments"> </ul>
-          {commentArray.map((id, index) => {
+          {commentArray.map((videoId, index) => {
             return (
               <li key={index}>
-                {id.commenterName} says {`"${id.comment}"`}
+                {videoId.commenterName} says {`"${videoId.comment}"`}
               </li>
             );
           })}
