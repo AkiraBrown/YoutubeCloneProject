@@ -26,5 +26,11 @@ export default function Cards() {
   
   */
 
-  return <div className="container"></div>;
+  return (
+    <div className="container-fluid position-absolute top-50 start-50 translate-middle text-center">
+      <div className="alert alert-danger" role="alert">
+        No Search Results Yet!, Please submit a search above!
+      </div>
+    </div>
+  );
 }

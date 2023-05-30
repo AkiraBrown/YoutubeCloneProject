@@ -19,11 +19,12 @@ export default function Card({ cardData }) {
         //const videoHeight = item?.snippet?.thumbnails?.high?.height;
         // console.log(videoThumbnail);
         return (
-          <Link to={`/videos/${videoID}`} key={videoID} className="col">
-            <div className="card" style={{ width: "20rem" }}>
+          <div className="card" style={{ width: "20rem" }} key={videoID}>
+            <Link to={`/videos/${videoID}`} className="col">
               <img
                 src={videoThumbnail}
                 alt={videoID}
+                className="card-img-top"
                 //style={{ width: videoWidth, height: videoHeight }}
               />
               <div className="card-body">
@@ -31,13 +32,13 @@ export default function Card({ cardData }) {
                   className="card-title text-truncate"
                   dangerouslySetInnerHTML={{ __html: videoTitle }}
                 />
-                <Link to={`/${channelTitle}`}>
-                  <p className="card-text">{channelTitle}</p>
-                </Link>
+
+                <p className="card-text">{channelTitle}</p>
+
                 <p className="card-text text-truncate">{videoDescription}</p>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </div>
         );
       })}
     </div>

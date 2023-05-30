@@ -6,20 +6,30 @@ export default function About() {
 
   const shaqFredBio = "Shaquala's Bio";
 
-  const AkiraBrownBio = "Akira's Bio";
+  const AkiraBrownBio =
+    "I'm a full stack developer and games developer with interests in cars and video games.";
 
   return (
-    <div style={{ textAlignVertical: "center", textAlign: "center" }}>
+    <div
+      style={{ textAlignVertical: "center", textAlign: "center" }}
+      className="position-absolute top-50 start-50 translate-middle text-center"
+    >
       <article key="about">{}</article>
       <h2>About our Project</h2>
       <p>{projectBio}</p>
-      <a href={"https://github.com/AkiraBrown"}>Akira's Github Link</a>
       <h2>About the Developers</h2>
-      <p>{shaqFredBio}</p>
-
-      <a href={"https://github.com/shaqfred"}>Shaquala's GitHub Link</a>
-
-      <p>{AkiraBrownBio}</p>
+      <div className="container text-center">
+        <div className="row">
+          <div className="col">
+            <a href={"https://github.com/AkiraBrown"}>Akira's Github Link</a>
+            <p>{AkiraBrownBio}</p>
+          </div>
+          <div className="col">
+            <a href={"https://github.com/shaqfred"}>Shaquala's GitHub Link</a>
+            <p>{shaqFredBio}</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
