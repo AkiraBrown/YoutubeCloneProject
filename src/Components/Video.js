@@ -11,6 +11,7 @@ export default function Video() {
   const [commentArray, setCommentArray] = useState([]);
   const [videoComments, setVideoComments] = useState([]);
   const commentCollection = collection(db, "commentSec");
+  // THis is a test line
   function handleSubmit(e) {
     e.preventDefault();
 
