@@ -39,7 +39,7 @@ export default function Video() {
               type="text"
               name="comment"
               id="comment"
-              onChange={(e = setComment(e.target.value))}
+              onChange={(e) => setComment(e.target.value)}
               value={comment}
             />
           </div>
