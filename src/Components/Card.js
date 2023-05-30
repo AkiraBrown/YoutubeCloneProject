@@ -1,35 +1,45 @@
+import { Link } from "react-router-dom";
 export default function Card({ cardData }) {
   //console.log(cardData);
   const localData = cardData;
 
   return (
-    <>
+    <div className="row row-cols-1 row-cols-md-3 g-4">
       {localData?.map((item) => {
-        console.log(item);
-        //console.log(item?.id?.videoId);
+        //console.log(item);
         const videoID = item?.id?.videoId;
-        //console.log(item?.snippet.title);
         const videoTitle = item?.snippet.title;
-        //console.log(item?.snippet.description);
         const videoDescription = item?.snippet.description;
-        const videoThumbnail = item?.snippet?.thumbnails?.default?.url;
-        const videoWidth = item?.snippet?.thumbnails?.default?.width;
-        const videoHeight = item?.snippet?.thumbnails?.default?.height;
+        const channelTitle = item?.snippet?.channelTitle;
+        const videoThumbnail = item?.snippet?.thumbnails?.high?.url;
+        //console.log(item?.id?.videoId);
+        //console.log(item?.snippet.title);
+        //console.log(item?.snippet.description);
+        //const videoWidth = item?.snippet?.thumbnails?.high?.width;
+        //const videoHeight = item?.snippet?.thumbnails?.high?.height;
         // console.log(videoThumbnail);
         return (
-          <div className="card" style={{ width: "18rem" }} key={videoID}>
-            <img
-              src={videoThumbnail}
-              alt={videoID}
-              style={{ width: videoWidth, height: videoHeight }}
-            />
-            <div className="card-body">
-              <h5 className="card-title">{videoTitle}</h5>
-              <p className="card-text">{videoDescription}</p>
+          <Link to={`/videos/${videoID}`} key={videoID} className="col">
+            <div className="card" style={{ width: "20rem" }}>
+              <img
+                src={videoThumbnail}
+                alt={videoID}
+                //style={{ width: videoWidth, height: videoHeight }}
+              />
+              <div className="card-body">
+                <h5
+                  className="card-title text-truncate"
+                  dangerouslySetInnerHTML={{ __html: videoTitle }}
+                />
+                <Link to={`/${channelTitle}`}>
+                  <p className="card-text">{channelTitle}</p>
+                </Link>
+                <p className="card-text text-truncate">{videoDescription}</p>
+              </div>
             </div>
-          </div>
+          </Link>
         );
       })}
-    </>
+    </div>
   );
 }

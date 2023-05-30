@@ -14,6 +14,7 @@ export default function About() {
       <article key="about">{}</article>
       <h2>About our Project</h2>
       <p>{projectBio}</p>
+      <a href={"https://github.com/AkiraBrown"}>Akira's Github Link</a>
       <h2>About the Developers</h2>
       <p>{shaqFredBio}</p>
 

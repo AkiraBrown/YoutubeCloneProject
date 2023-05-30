@@ -6,6 +6,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import Cards from "./Components/Cards";
 import About from "./Components/About";
+import Video from "./Components/Video";
+import Channel from "./Components/Channel";
+import SearchResults from "./Components/SearchResults";
 
 function App() {
   return (
@@ -15,8 +18,12 @@ function App() {
         <Routes>
           <Route path="/" element={<Cards />}></Route>
           <Route path="/About" element={<About />}></Route>
-          <Route path="/:channel"></Route>
-          <Route path="/videos/:videoId"></Route>
+          <Route path="/:channel" element={<Channel />}></Route>
+          <Route path="/videos/:videoId" element={<Video />}></Route>
+          <Route
+            path="/search/:searchResults"
+            element={<SearchResults />}
+          ></Route>
         </Routes>
       </Router>
     </div>
