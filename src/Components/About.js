@@ -43,8 +43,23 @@ export default function About() {
             </div>
           </div>
           <div className="col">
-            <a href={"https://github.com/shaqfred"}>Shaquala's GitHub Link</a>
-            <p>{shaqFredBio}</p>
+            <div className="card bg-danger" style={{ width: "18rem" }}>
+              <div className="card-body">
+                <img
+                  src="https://avatars.githubusercontent.com/u/96317236?v=4"
+                  className="card-img-top"
+                  alt=""
+                ></img>
+                <h5 className="card-title">Shaquala Fredericks</h5>
+                <p className="card-text">{shaqFredBio}</p>
+                <a
+                  href={"https://github.com/shaqfred"}
+                  className="btn btn-primary"
+                >
+                  Shaquala's GitHub Link
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
