@@ -53,6 +53,7 @@ export default function Video() {
   }, [hasSubmitted]);
 
   return (
+
     // d-flex justify-content-center position-absolute top-50 start-50 translate-middle text-center
     <div className="container align-middle">
       <Youtube videoId={videoId} />
@@ -81,8 +82,9 @@ export default function Video() {
               className="form-control"
               onChange={(e) => setCommentText(e.target.value)}
               value={commentText}
+
             />
-          </div>
+
           <button type="submit" className="btn btn-primary">
             Comment
           </button>
