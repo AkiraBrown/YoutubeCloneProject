@@ -55,7 +55,9 @@ export default function Video() {
   return (
     // d-flex justify-content-center position-absolute top-50 start-50 translate-middle text-center
     <div className="container align-middle">
-      <Youtube videoId={videoId} />
+      <div className="container mx-auto p-2" style={{ width: "700px" }}>
+        <Youtube videoId={videoId} />
+      </div>
 
       <div className="container">
         <form onSubmit={handleSubmit}>
