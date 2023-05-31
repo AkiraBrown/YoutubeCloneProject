@@ -10,11 +10,14 @@ export default function SearchBar() {
   // }
   //Deprecated parameters
   //-------------------------//
+
   const [input, setUserInput] = useState("");
   const navigate = useNavigate();
 
+  function resetForm() {}
   function handleSubmit(event) {
     event.preventDefault();
+
     //console.log(input);
     //-----------------Not Yet and bad syntax-----------------//
     // fetchApi(input).then((response) => {
