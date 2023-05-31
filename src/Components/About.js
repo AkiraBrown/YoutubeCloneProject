@@ -13,17 +13,34 @@ export default function About() {
   return (
     <div
       style={{ textAlignVertical: "center", textAlign: "center" }}
-      className="position-absolute top-50 start-50 translate-middle text-center"
+      className="container-fluid text-center"
     >
       <article key="about">{}</article>
-      <h2>About our Project</h2>
-      <p>{projectBio}</p>
-      <h2>About the Developers</h2>
+      <div className="container ">
+        <h2 className="text-body-emphasis fw-bold">About our Project</h2>
+        <p>{projectBio}</p>
+      </div>
+      <h2 className="text-body-emphasis fw-bold">About the Developers</h2>
       <div className="container text-center">
         <div className="row">
           <div className="col">
-            <a href={"https://github.com/AkiraBrown"}>Akira's Github Link</a>
-            <p>{AkiraBrownBio}</p>
+            <div className="card bg-danger" style={{ width: "18rem" }}>
+              <div className="card-body">
+                <img
+                  src="https://avatars.githubusercontent.com/u/122545794?v=4"
+                  className="card-img-top"
+                  alt=""
+                ></img>
+                <h5 className="card-title">Akira Watson-Brown</h5>
+                <p className="card-text">{AkiraBrownBio}</p>
+                <a
+                  href={"https://github.com/AkiraBrown"}
+                  className="btn btn-primary"
+                >
+                  Akira's Github Link
+                </a>
+              </div>
+            </div>
           </div>
           <div className="col">
             <a href={"https://github.com/shaqfred"}>Shaquala's GitHub Link</a>

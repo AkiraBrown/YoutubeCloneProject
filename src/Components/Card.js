@@ -25,6 +25,7 @@ export default function Card({ cardData }) {
                 src={videoThumbnail}
                 alt={videoID}
                 className="card-img-top"
+
                 //style={{ width: videoWidth, height: videoHeight }}
               />
               <div className="card-body">
@@ -32,7 +33,6 @@ export default function Card({ cardData }) {
                   className="card-title text-truncate"
                   dangerouslySetInnerHTML={{ __html: videoTitle }}
                 />
-
                 <p className="card-text">{channelTitle}</p>
 
                 <p className="card-text text-truncate">{videoDescription}</p>

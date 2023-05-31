@@ -22,7 +22,7 @@ export default function SearchResults() {
         setSearchData(result?.data);
         setDataRetrieval(true);
       } catch (error) {
-        console.log(error);
+        console.log(`Failed to get results`);
         setDataRetrieval(false);
       }
     }
@@ -41,7 +41,7 @@ export default function SearchResults() {
         <div className="container-fluid position-absolute top-50 start-50 translate-middle text-center">
           <button
             type="button"
-            class="btn btn-primary"
+            className="btn btn-primary"
             data-bs-toggle="modal"
             data-bs-target="#exampleModal"
           >

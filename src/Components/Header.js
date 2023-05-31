@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import SearchBar from "./SearchBar";
 export default function Header() {
   return (
-    <nav className="navbar navbar-expand-md bg-danger fixed-top">
+    <nav className="navbar navbar-expand-md bg-danger">
       <div className="container-fluid">
         <NavLink className={"navbar-brand"} to="/">
           Youtube
