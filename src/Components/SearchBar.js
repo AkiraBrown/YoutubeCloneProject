@@ -14,7 +14,6 @@ export default function SearchBar() {
   const [input, setUserInput] = useState("");
   const navigate = useNavigate();
 
-  function resetForm() {}
   function handleSubmit(event) {
     event.preventDefault();
 
