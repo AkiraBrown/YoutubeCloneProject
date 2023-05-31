@@ -21,40 +21,43 @@ export default function Video() {
   console.log(commentArray);
   return (
     <div className="container-fluid">
-      <Youtube videoId={videoId}></Youtube>
+      <div style={{ textAlignVertical: "center", textAlign: "center" }}>
+        <Youtube videoId={videoId}></Youtube>
 
-      <form onSubmit={handleSubmit}>
-        <div className="form">
-          <label>CommenterName</label>
-          <input
-            type="text"
-            name="commenter-name"
-            id="commenter-name"
-            onChange={(event) => setCommenterName(event.target.value)}
-            value={commenterName}
-          />
-          <div>
-            <label>Comment</label>
+        <form onSubmit={handleSubmit}>
+          <div className="form">
+            <label>CommenterName</label>
             <input
               type="text"
-              name="comment"
-              id="comment"
-              onChange={(event) => setComment(event.target.value)}
-              value={comment}
+              name="commenter-name"
+              id="commenter-name"
+              onChange={(event) => setCommenterName(event.target.value)}
+              value={commenterName}
             />
-          </div>
-          <button>Add Note</button>
+            <div>
+              <label>Comment</label>
+              <input
+                type="text"
+                name="comment"
+                id="comment"
+                onChange={(event) => setComment(event.target.value)}
+                value={comment}
+              />
+            </div>
 
-          <ul className="comments"> </ul>
-          {commentArray.map((videoId, index) => {
-            return (
-              <li key={index}>
-                {videoId.commenterName} says {`"${videoId.comment}"`}
-              </li>
-            );
-          })}
-        </div>
-      </form>
+            <button>Add Comment</button>
+
+            <ul className="comments"> </ul>
+            {commentArray.map((videoId, index) => {
+              return (
+                <li key={index}>
+                  {videoId.commenterName} says {`"${videoId.comment}"`}
+                </li>
+              );
+            })}
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
