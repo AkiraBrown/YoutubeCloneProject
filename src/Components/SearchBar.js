@@ -17,7 +17,6 @@ export default function SearchBar() {
   function resetForm() {}
   function handleSubmit(event) {
     event.preventDefault();
-    resetForm();
 
     //console.log(input);
     //-----------------Not Yet and bad syntax-----------------//
@@ -29,6 +28,8 @@ export default function SearchBar() {
     // });
     //-------------------------------------------------------//
     navigate(`/search/${input.replace(/\s/g, "+")}`);
+
+    resetForm();
   }
 
   function handleTextChange(e) {
@@ -36,6 +37,9 @@ export default function SearchBar() {
     const formatText = localText; //.replace(/\s/g, "+");
     //console.log(formatText);
     setUserInput(formatText);
+  }
+  function resetForm() {
+    setUserInput("");
   }
   /* This was used on input in form => |(event) => { setUserInput(event.target.value)} */
   return (
